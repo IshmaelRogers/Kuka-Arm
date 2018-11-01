@@ -2,15 +2,17 @@
 ### Ishmael Rogers
 ### Robotics Engineer, Infinitely Deep Robotics Group
 ### 2018 
----
 ### Writeup / README
+---
 ### Kinematic Analysis
-### Kuka KR210 model
+---
+
+### Kuka KR210 annotated model
 
 https://github.com/IshmaelRogers/Kuka-Arm/issues/2
 
 ### Explanation of DH Parameters
----
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha&space;_{i-1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\alpha&space;_{i-1}" title="\alpha _{i-1}" /></a>
 
 The twist angle is defined as the angle between <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{Z}_{i-1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{Z}_{i-1}" title="\hat{Z}_{i-1}" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{Z}_{i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{Z}_{i}" title="\hat{Z}_{i}" /></a> measured along <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{X}_{i-1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{X}_{i-1}" title="\hat{X}_{i-1}" /></a>
