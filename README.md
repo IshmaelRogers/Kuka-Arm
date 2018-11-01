@@ -1,9 +1,7 @@
-## Project: Kinematics Pick & Place
+### Project: Kinematics Pick & Place
 ### Ishmael Rogers
 ### Robotics Engineer, Infinitely Deep Robotics Group
-
-
-
+### 2018 
 ---
 ### Writeup / README
 ### Kinematic Analysis
