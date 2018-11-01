@@ -94,13 +94,18 @@ The joint angle is the angle between <a href="https://www.codecogs.com/eqnedit.p
   </tr>
 </table>
 
-Here is an example of how to include an image in your writeup.
+### Finding the Homogenous Matrix is a composition of homogeneous transforms
 
-![alt text][image1]
+<a href="https://www.codecogs.com/eqnedit.php?latex=_{i}^{i-1}\textrm{T}=&space;R_{x}(\alpha_{i-1}&space;)&space;\times&space;D_{x}(a_{i-1})&space;\times&space;R_{z}(\theta{i})&space;\times&space;D_{z}(d_{i})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{i}^{i-1}\textrm{T}=&space;R_{x}(\alpha_{i-1}&space;)&space;\times&space;D_{x}(a_{i-1})&space;\times&space;R_{z}(\theta{i})&space;\times&space;D_{z}(d_{i})" title="_{i}^{i-1}\textrm{T}= R_{x}(\alpha_{i-1} ) \times D_{x}(a_{i-1}) \times R_{z}(\theta{i}) \times D_{z}(d_{i})" /></a>
 
 #### Create individual transformation matrices about each joint. 
 
+Link 0-1
+<a href="https://www.codecogs.com/eqnedit.php?latex=_{1}^{0}\textrm{T}=\begin{bmatrix}&space;\cos(\theta_{1})&space;&\sin(\theta_{1})&space;&0&space;&a_{0}&space;\\&space;\sin(\theta_{1})\times&space;\cos(\alpha_{0})&&space;\cos(\theta_{1})\times&space;\cos(\alpha_{0})&space;&-\sin(\alpha_0)&space;&-\sin(\alpha_{0}\times&space;d_{i})\\&space;\sin(\theta_1)\times&space;\sin(\alpha_{0})&space;&\cos(\theta_{1})\times\sin(\alpha_{0})&space;&\cos(\alpha_{0})&space;&\cos(\alpha_1\)\times&space;d_i&space;\\&space;0&space;&0&space;&0&space;&1&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{1}^{0}\textrm{T}=\begin{bmatrix}&space;\cos(\theta_{1})&space;&\sin(\theta_{1})&space;&0&space;&a_{0}&space;\\&space;\sin(\theta_{1})\times&space;\cos(\alpha_{0})&&space;\cos(\theta_{1})\times&space;\cos(\alpha_{0})&space;&-\sin(\alpha_0)&space;&-\sin(\alpha_{0}\times&space;d_{i})\\&space;\sin(\theta_1)\times&space;\sin(\alpha_{0})&space;&\cos(\theta_{1})\times\sin(\alpha_{0})&space;&\cos(\alpha_{0})&space;&\cos(\alpha_1\)\times&space;d_i&space;\\&space;0&space;&0&space;&0&space;&1&space;\end{bmatrix}" title="_{1}^{0}\textrm{T}=\begin{bmatrix} \cos(\theta_{1}) &\sin(\theta_{1}) &0 &a_{0} \\ \sin(\theta_{1})\times \cos(\alpha_{0})& \cos(\theta_{1})\times \cos(\alpha_{0}) &-\sin(\alpha_0) &-\sin(\alpha_{0}\times d_{i})\\ \sin(\theta_1)\times \sin(\alpha_{0}) &\cos(\theta_{1})\times\sin(\alpha_{0}) &\cos(\alpha_{0}) &\cos(\alpha_1\)\times d_i \\ 0 &0 &0 &1 \end{bmatrix}" /></a>
 
+Link 1-2
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=_{1}^{0}\textrm{T}=\begin{bmatrix}&space;\cos(\theta_{2})&space;&\sin(\theta_{2})&space;&0&space;&a_{1}&space;\\&space;\sin(\theta_{2})\times&space;\cos(\alpha_{1})&&space;\cos(\theta_{2})\times&space;\cos(\alpha_{1})&space;&-\sin(\alpha_1)&space;&-\sin(\alpha_{1}\times&space;d_{2})\\&space;\sin(\theta_2)\times&space;\sin(\alpha_{1})&space;&\cos(\theta_{2})\times\sin(\alpha_{1})&space;&\cos(\alpha_{1})&space;&\cos(\alpha_2\)\times&space;d_i&space;\\&space;0&space;&0&space;&0&space;&1&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{1}^{0}\textrm{T}=\begin{bmatrix}&space;\cos(\theta_{2})&space;&\sin(\theta_{2})&space;&0&space;&a_{1}&space;\\&space;\sin(\theta_{2})\times&space;\cos(\alpha_{1})&&space;\cos(\theta_{2})\times&space;\cos(\alpha_{1})&space;&-\sin(\alpha_1)&space;&-\sin(\alpha_{1}\times&space;d_{2})\\&space;\sin(\theta_2)\times&space;\sin(\alpha_{1})&space;&\cos(\theta_{2})\times\sin(\alpha_{1})&space;&\cos(\alpha_{1})&space;&\cos(\alpha_2\)\times&space;d_i&space;\\&space;0&space;&0&space;&0&space;&1&space;\end{bmatrix}" title="_{1}^{0}\textrm{T}=\begin{bmatrix} \cos(\theta_{2}) &\sin(\theta_{2}) &0 &a_{1} \\ \sin(\theta_{2})\times \cos(\alpha_{1})& \cos(\theta_{2})\times \cos(\alpha_{1}) &-\sin(\alpha_1) &-\sin(\alpha_{1}\times d_{2})\\ \sin(\theta_2)\times \sin(\alpha_{1}) &\cos(\theta_{2})\times\sin(\alpha_{1}) &\cos(\alpha_{1}) &\cos(\alpha_2\)\times d_i \\ 0 &0 &0 &1 \end{bmatrix}" /></a>
 
 
 
