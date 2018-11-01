@@ -134,7 +134,10 @@ The joint angle is the angle between <a href="https://www.codecogs.com/eqnedit.p
 <a href="https://www.codecogs.com/eqnedit.php?latex=_{EE}^{0}\textrm{T}=&space;_{1}^{0}\textrm{T}&space;\times&space;_{2}^{1}\textrm{T}&space;\times&space;_{3}^{2}\textrm{T}&space;\times&space;_{4}^{3}\textrm{T}&space;\times&space;_{5}^{4}\textrm{T}&space;\times&space;_{6}^{5}\textrm{T}&space;\times&space;_{EE}^{6}\textrm{T}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{EE}^{0}\textrm{T}=&space;_{1}^{0}\textrm{T}&space;\times&space;_{2}^{1}\textrm{T}&space;\times&space;_{3}^{2}\textrm{T}&space;\times&space;_{4}^{3}\textrm{T}&space;\times&space;_{5}^{4}\textrm{T}&space;\times&space;_{6}^{5}\textrm{T}&space;\times&space;_{EE}^{6}\textrm{T}" title="_{EE}^{0}\textrm{T}= _{1}^{0}\textrm{T} \times _{2}^{1}\textrm{T} \times _{3}^{2}\textrm{T} \times _{4}^{3}\textrm{T} \times _{5}^{4}\textrm{T} \times _{6}^{5}\textrm{T} \times _{EE}^{6}\textrm{T}" /></a>
 
 
-#### 3. Decoupling Inverse Kinematics problem into Inverse Position Kinematics and Inverse Orientation Kinematics; 
+#### 3. Decoupling Inverse Kinematics problem into Inverse Position Kinematics and Inverse Orientation Kinematics
+
+1. Inverse Position involves determining the cartesian coordinated of the wrist center
+2. Inverse Orientation is the composition of rotations to orient the end-effect
 
 ### The equations to calculate all individual joint angles.
 
