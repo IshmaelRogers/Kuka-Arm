@@ -136,6 +136,8 @@ The joint angle is the angle between <a href="https://www.codecogs.com/eqnedit.p
 
 #### 3. Decoupling Inverse Kinematics problem into Inverse Position Kinematics and Inverse Orientation Kinematics
 
+Since the Kuka KR210 Robot is a 6 DOF manipulator and the last three joints (<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_4" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_4" title="\theta_4" /></a> through <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_6" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_6" title="\theta_6" /></a> 
+
 1. Inverse Position involves determining the cartesian coordinated of the wrist center
 2. Inverse Orientation is the composition of rotations to orient the end-effect
 
