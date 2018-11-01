@@ -3,6 +3,7 @@
 ### Robotics Engineer, Infinitely Deep Robotics Group
 
 ---
+<a href="https://www.codecogs.com/eqnedit.php?latex=\alpha&space;_{i-1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\alpha&space;_{i-1}" title="\alpha _{i-1}" /></a>
 
 
 **Steps to complete the project:**  
