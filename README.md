@@ -5,7 +5,7 @@
 ---
 <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha&space;_{i-1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\alpha&space;_{i-1}" title="\alpha _{i-1}" /></a>
 
-The twist angle is defined as the angle between <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{Z}_{i-1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{Z}_{i-1}" title="\hat{Z}_{i-1}" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{Z}_{i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{Z}_{i}" title="\hat{Z}_{i}" /></a> measured along <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{x}_{i-1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{x}_{i-1}" title="\hat{x}_{i-1}" /></a>
+The twist angle is defined as the angle between <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{Z}_{i-1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{Z}_{i-1}" title="\hat{Z}_{i-1}" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{z}_{i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{z}_{i}" title="\hat{z}_{i}" /></a> measured along <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{x}_{i-1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{x}_{i-1}" title="\hat{x}_{i-1}" /></a>
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=a_{i-1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?a_{i-1}" title="a_{i-1}" /></a>
 
