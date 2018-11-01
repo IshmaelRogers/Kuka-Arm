@@ -129,12 +129,7 @@ Link 6-EE
 <a href="https://www.codecogs.com/eqnedit.php?latex=_{EE}^{6}\textrm{T}=\begin{bmatrix}&space;\cos(\theta_{7})&space;&\sin(\theta_{7})&space;&0&space;&a_{6}&space;\\&space;\sin(\theta_{7})\times&space;\cos(\alpha_{6})&&space;\cos(\theta_{7})\times&space;\cos(\alpha_{6})&space;&-\sin(\alpha_6)&space;&-\sin(\alpha_{6}\times&space;d_{7})\\&space;\sin(\theta_7)\times&space;\sin(\alpha_{6})&space;&\cos(\theta_{7})\times\sin(\alpha_{6})&space;&\cos(\alpha_{6})&space;&\cos(\alpha_7\)\times&space;d_7&space;\\&space;0&space;&0&space;&0&space;&1&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{EE}^{6}\textrm{T}=\begin{bmatrix}&space;\cos(\theta_{7})&space;&\sin(\theta_{7})&space;&0&space;&a_{6}&space;\\&space;\sin(\theta_{7})\times&space;\cos(\alpha_{6})&&space;\cos(\theta_{7})\times&space;\cos(\alpha_{6})&space;&-\sin(\alpha_6)&space;&-\sin(\alpha_{6}\times&space;d_{7})\\&space;\sin(\theta_7)\times&space;\sin(\alpha_{6})&space;&\cos(\theta_{7})\times\sin(\alpha_{6})&space;&\cos(\alpha_{6})&space;&\cos(\alpha_7\)\times&space;d_7&space;\\&space;0&space;&0&space;&0&space;&1&space;\end{bmatrix}" title="_{EE}^{6}\textrm{T}=\begin{bmatrix} \cos(\theta_{7}) &\sin(\theta_{7}) &0 &a_{6} \\ \sin(\theta_{7})\times \cos(\alpha_{6})& \cos(\theta_{7})\times \cos(\alpha_{6}) &-\sin(\alpha_6) &-\sin(\alpha_{6}\times d_{7})\\ \sin(\theta_7)\times \sin(\alpha_{6}) &\cos(\theta_{7})\times\sin(\alpha_{6}) &\cos(\alpha_{6}) &\cos(\alpha_7\)\times d_7 \\ 0 &0 &0 &1 \end{bmatrix}" /></a>
 
 
-
-
-
-
-
-### a generalized homogeneous transform between base_link and gripper_link using only end-effector(gripper) pose.
+### a generalized homogeneous transform between base_link and gripper_link 
 
 
 
