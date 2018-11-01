@@ -57,16 +57,70 @@ Here is an example of how to include an image in your writeup.
 
 #### 2. Using the DH parameter table you derived earlier, create individual transformation matrices about each joint. In addition, also generate a generalized homogeneous transform between base_link and gripper_link using only end-effector(gripper) pose.
 
-Links | alpha(i-1) | a(i-1) | d(i-1) | theta(i)
---- | --- | --- | --- | ---
-0->1 | 0 | 0 | L1 | qi
-1->2 | - pi/2 | L2 | 0 | -pi/2 + q2
-2->3 | 0 | 0 | 0 | 0
-3->4 |  0 | 0 | 0 | 0
-4->5 | 0 | 0 | 0 | 0
-5->6 | 0 | 0 | 0 | 0
-6->EE | 0 | 0 | 0 | 0
-
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0lax">Link i</th>
+    <th class="tg-0lax">Twist angle</th>
+    <th class="tg-0lax">Link length</th>
+    <th class="tg-0lax">Offset</th>
+    <th class="tg-0lax">Joint angle </th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Link 0</td>
+    <td class="tg-0lax">0</td>
+    <td class="tg-0lax">0</td>
+    <td class="tg-0lax">0.75</td>
+    <td class="tg-0lax">q1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Link 1</td>
+    <td class="tg-0lax">-pi/2</td>
+    <td class="tg-0lax">0.35</td>
+    <td class="tg-0lax">0</td>
+    <td class="tg-0lax">q2 = q2 - pi/2</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Link 2</td>
+    <td class="tg-0lax">0</td>
+    <td class="tg-0lax">1.25</td>
+    <td class="tg-0lax">0</td>
+    <td class="tg-0lax">q3</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Link 3</td>
+    <td class="tg-0lax">-pi/2</td>
+    <td class="tg-0lax">-0.054</td>
+    <td class="tg-0lax">1.50</td>
+    <td class="tg-0lax">q4</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Link 4</td>
+    <td class="tg-0lax">pi/2</td>
+    <td class="tg-0lax">0</td>
+    <td class="tg-0lax">0</td>
+    <td class="tg-0lax">q5</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Link 5</td>
+    <td class="tg-0lax">-pi/2</td>
+    <td class="tg-0lax">0</td>
+    <td class="tg-0lax">0</td>
+    <td class="tg-0lax">q6</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Link 6 </td>
+    <td class="tg-0lax">0</td>
+    <td class="tg-0lax">0</td>
+    <td class="tg-0lax">0.303</td>
+    <td class="tg-0lax">q7</td>
+  </tr>
+</table>
 
 #### 3. Decouple Inverse Kinematics problem into Inverse Position Kinematics and inverse Orientation Kinematics; doing so derive the equations to calculate all individual joint angles.
 
