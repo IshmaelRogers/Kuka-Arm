@@ -57,68 +57,62 @@ Here is an example of how to include an image in your writeup.
 
 #### 2. Using the DH parameter table you derived earlier, create individual transformation matrices about each joint. In addition, also generate a generalized homogeneous transform between base_link and gripper_link using only end-effector(gripper) pose.
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-</style>
-<table class="tg">
+<table>
   <tr>
-    <th class="tg-0lax">Link i</th>
-    <th class="tg-0lax">Twist angle</th>
-    <th class="tg-0lax">Link length</th>
-    <th class="tg-0lax">Offset</th>
-    <th class="tg-0lax">Joint angle </th>
+    <th>Link i</th>
+    <th>Twist angle</th>
+    <th>Link length</th>
+    <th>Offset</th>
+    <th>Joint angle </th>
   </tr>
   <tr>
-    <td class="tg-0lax">Link 0</td>
-    <td class="tg-0lax">0</td>
-    <td class="tg-0lax">0</td>
-    <td class="tg-0lax">0.75</td>
-    <td class="tg-0lax">q1</td>
+    <td>Link 0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0.75</td>
+    <td>q1</td>
   </tr>
   <tr>
-    <td class="tg-0lax">Link 1</td>
-    <td class="tg-0lax">-pi/2</td>
-    <td class="tg-0lax">0.35</td>
-    <td class="tg-0lax">0</td>
-    <td class="tg-0lax">q2 = q2 - pi/2</td>
+    <td>Link 1</td>
+    <td>-pi/2</td>
+    <td>0.35</td>
+    <td>0</td>
+    <td>q2 = q2 - pi/2</td>
   </tr>
   <tr>
-    <td class="tg-0lax">Link 2</td>
-    <td class="tg-0lax">0</td>
-    <td class="tg-0lax">1.25</td>
-    <td class="tg-0lax">0</td>
-    <td class="tg-0lax">q3</td>
+    <td>Link 2</td>
+    <td>0</td>
+    <td>1.25</td>
+    <td>0</td>
+    <td>q3</td>
   </tr>
   <tr>
-    <td class="tg-0lax">Link 3</td>
-    <td class="tg-0lax">-pi/2</td>
-    <td class="tg-0lax">-0.054</td>
-    <td class="tg-0lax">1.50</td>
-    <td class="tg-0lax">q4</td>
+    <td>Link 3</td>
+    <td>-pi/2</td>
+    <td>-0.054</td>
+    <td>1.50</td>
+    <td>q4</td>
   </tr>
   <tr>
-    <td class="tg-0lax">Link 4</td>
-    <td class="tg-0lax">pi/2</td>
-    <td class="tg-0lax">0</td>
-    <td class="tg-0lax">0</td>
-    <td class="tg-0lax">q5</td>
+    <td>Link 4</td>
+    <td>pi/2</td>
+    <td>0</td>
+    <td>0</td>
+    <td>q5</td>
   </tr>
   <tr>
-    <td class="tg-0lax">Link 5</td>
-    <td class="tg-0lax">-pi/2</td>
-    <td class="tg-0lax">0</td>
-    <td class="tg-0lax">0</td>
-    <td class="tg-0lax">q6</td>
+    <td>Link 5</td>
+    <td>-pi/2</td>
+    <td>0</td>
+    <td>0</td>
+    <td>q6</td>
   </tr>
   <tr>
-    <td class="tg-0lax">Link 6 </td>
-    <td class="tg-0lax">0</td>
-    <td class="tg-0lax">0</td>
-    <td class="tg-0lax">0.303</td>
-    <td class="tg-0lax">q7</td>
+    <td>Link 6 </td>
+    <td>0</td>
+    <td>0</td>
+    <td>0.303</td>
+    <td>q7</td>
   </tr>
 </table>
 
