@@ -139,9 +139,12 @@ The joint angle is the angle between <a href="https://www.codecogs.com/eqnedit.p
 Since the Kuka KR210 Robot is a 6 DOF manipulator, it is possible to break the inverse kinematics problem into two simpler problems.
 
 1. Inverse Position involves determining the cartesian coordinated of the wrist center
+### Equation to solve for coordinates of wrist center
+
+
 2. Inverse Orientation is the composition of rotations to orient the end-effect
 
-### Note: Spherical wrists means that axes <a href="https://www.codecogs.com/eqnedit.php?latex=z_3" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z_3" title="z_3" /></a> , <a href="https://www.codecogs.com/eqnedit.php?latex=z_4" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z_4" title="z_4" /></a>, and <a href="https://www.codecogs.com/eqnedit.php?latex=z_5" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z_5" title="z_5" /></a> intersect at the origin of the wrist center <a href="https://www.codecogs.com/eqnedit.php?latex=O_c" target="_blank"><img src="https://latex.codecogs.com/gif.latex?O_c" title="O_c" /></a>
+### Note: Spherical wrists for the KR210 Robot implies that axes <a href="https://www.codecogs.com/eqnedit.php?latex=z_4" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z_4" title="z_4" /></a> , <a href="https://www.codecogs.com/eqnedit.php?latex=z_5" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z_5" title="z_5" /></a>, and <a href="https://www.codecogs.com/eqnedit.php?latex=z_6" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z_6" title="z_6" /></a> all intersect at one point i.e the origin of the wrist center <a href="https://www.codecogs.com/eqnedit.php?latex=O_c" target="_blank"><img src="https://latex.codecogs.com/gif.latex?O_c" title="O_c" /></a>
 
 
 
