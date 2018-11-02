@@ -140,6 +140,12 @@ Since the Kuka KR210 Robot is a 6 DOF manipulator, it is possible to break the i
 
 1. Inverse Position involves determining the cartesian coordinated of the wrist center
 ### Equation to solve for coordinates of wrist center
+<a href="https://www.codecogs.com/eqnedit.php?latex=r_{wc/0}&space;=&space;r_{EE/0}&space;-&space;d&space;\times_&space;{6}^{0}\textrm{R}&space;\times&space;\begin{bmatrix}&space;0\\&space;0\\&space;1&space;\end{bmatrix}&space;=\begin{bmatrix}&space;p_{x}\\&space;p_{y}\\&space;p_{z}&space;\end{bmatrix}&space;-&space;d&space;\times&space;R_{6}^{0}&space;\times&space;\begin{bmatrix}&space;0\\&space;0\\&space;1&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?r_{wc/0}&space;=&space;r_{EE/0}&space;-&space;d&space;\times_&space;{6}^{0}\textrm{R}&space;\times&space;\begin{bmatrix}&space;0\\&space;0\\&space;1&space;\end{bmatrix}&space;=\begin{bmatrix}&space;p_{x}\\&space;p_{y}\\&space;p_{z}&space;\end{bmatrix}&space;-&space;d&space;\times&space;R_{6}^{0}&space;\times&space;\begin{bmatrix}&space;0\\&space;0\\&space;1&space;\end{bmatrix}" title="r_{wc/0} = r_{EE/0} - d \times_ {6}^{0}\textrm{R} \times \begin{bmatrix} 0\\ 0\\ 1 \end{bmatrix} =\begin{bmatrix} p_{x}\\ p_{y}\\ p_{z} \end{bmatrix} - d \times R_{6}^{0} \times \begin{bmatrix} 0\\ 0\\ 1 \end{bmatrix}" /></a>
+
+### Equation explanation 
+---
+
+Assume that <a href="https://www.codecogs.com/eqnedit.php?latex=z_4&space;\parallel&space;z_6" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z_4&space;\parallel&space;z_6" title="z_4 \parallel z_6" /></a> and point from the wrist center to the EE. The displacement is a translation along <a href="https://www.codecogs.com/eqnedit.php?latex=z_6" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z_6" title="z_6" /></a>. The magnitude of this displacement is labled d.
 
 
 2. Inverse Orientation is the composition of rotations to orient the end-effect
@@ -162,8 +168,5 @@ Used the law of cosines to locate the wrist center
 
 The code follows calculates the FK model and then uses poses to estimate joint angles using the IKserver.py
 
-
-And just for fun, another example image:
-![alt text][image3]
 
 
