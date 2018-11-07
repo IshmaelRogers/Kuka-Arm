@@ -6,8 +6,8 @@
 
 [//]: # Image References
 
-[image1]: ./Images/Annotated Kuka Arm.JPG
-
+[image1]: ./Images/DH_model.JPG
+      
 
 [image2]:
 
