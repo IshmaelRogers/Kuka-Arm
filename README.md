@@ -3,6 +3,17 @@
 ### Robotics Engineer, Infinitely Deep Robotics Group
 ### 2018 
 ### Writeup / README
+
+[//]: # Image References
+
+[image1]: 
+[image2]:
+
+
+
+
+
+
 ---
 ### Kinematic Analysis
 ---
