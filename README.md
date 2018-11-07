@@ -174,6 +174,8 @@ Used the law of cosines to locate the wrist center
 
 #### 1. Fill in the `IK_server.py` file with properly commented python code for calculating Inverse Kinematics based on previously performed Kinematic Analysis. Your code must guide the robot to successfully complete 8/10 pick and place cycles. Briefly discuss the code you implemented and your results. 
 
+![alt text][Image2]
+
 The code follows calculates the FK model and then uses poses to estimate joint angles using the IKserver.py
 
 
