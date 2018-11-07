@@ -6,11 +6,8 @@
 
 [//]: # Image References
 
-[image1]: 
+[image1]: ./Kuka-Arm/Images/Annotated Kuka Arm.JPG
 [image2]:
-
-
-
 
 
 
@@ -41,7 +38,7 @@ The link offset is the signed distance from <a href="https://www.codecogs.com/eq
 
 The joint angle is the angle between <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{X}_{i-1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{X}_{i-1}" title="\hat{X}_{i-1}" /></a> to <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{X}_{i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{X}_{i}" title="\hat{X}_{i}" /></a> measured along <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{Z}_{i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{Z}_{i}" title="\hat{Z}_{i}" /></a> in a right hand sense for revolute joints.
 
-
+![alt text][image1]
 
 ###
 ### DH Parameter Table 
