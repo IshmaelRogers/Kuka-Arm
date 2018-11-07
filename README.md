@@ -4,12 +4,10 @@
 ### 2018 
 ### Writeup / README
 
-[//]: # Image References
 
 [image1]: ./Images/DH_model.JPG
-      
 
-[image2]:
+[image2]: ./Images/picknplace.PNG
 
 
 
