@@ -1,13 +1,5 @@
 #!/usr/bin/env python
 
-# Copyright (C) 2017 Electric Movement Inc.
-#
-# This file is part of Robotic Arm: Pick and Place project for Udacity
-# Robotics nano-degree program
-#
-# All Rights Reserved.
-
-# Author: Harsh Pandya
 
 # import modules
 import rospy
@@ -68,7 +60,7 @@ def handle_calculate_IK(req):
     			# req.poses[x].orientation.z, req.poses[x].orientation.w])
 
         r, p , y = symbols('r p y')
-
+        #Elementary rotation matrices
         ROT_x = Matrix([[1, 0 , 0],
 		[0, cos(r), -sin(r)],
    		[0, sin(r), cos(r)]]) # ROLL
@@ -109,28 +101,33 @@ def handle_calculate_IK(req):
             ROT_EE = ROT_EE.subs({'r': roll, 'p': pitch, 'y': yaw})
 
             EE = Matrix([[px], [py], [pz]])
-
+	    
+	    # the equation that calculates the wrist center given the position of the EE
+		
             WC = EE - (0.303) * ROT_EE[:,2]
+	    
+	    # calculates the first joint angle using the two argument tangent funcion
+            # this function makes it easier to distinguish between positive and negatives 		
             theta1 = atan2(WC[1], WC[0])
-
+	    # the length and angles of side a, b and c were calculated using the Law of Cosines
             side_a = 1.501
             side_b = sqrt(pow(sqrt(WC[0] * WC[0] + WC[1] * WC[1]) - 0.35, 2)+ pow((WC[2] - 0.75), 2))
-
-            side_c = 1.25
+	    side_c = 1.25
 
             angle_a = acos((side_b * side_b + side_c * side_c - side_a * side_a) / (2 * side_b * side_c))
             angle_b = acos((side_a * side_a + side_c * side_c - side_b * side_b) / (2 * side_a * side_c))
             angle_c = acos((side_a * side_a + side_b * side_b - side_c * side_c ) / (2 * side_a * side_b))
-
+            
+	    #calculate joint 2 and 3 in the closed form
             theta2 = pi/2 - angle_a - atan2(WC[2] - 0.75, sqrt(WC[0] * WC[0] + WC[1] * WC[1]) - 0.35) #(CHANGED!!!)
 
             theta3 = pi/2 - (angle_b + 0.036) # 0.036 accounts for sag in link4 of -0.054m
-
+  	    # calculate the rotation between the base link and the link 3
             R0_3 = T0_1[0:3,0:3] * T1_2[0:3,0:3] * T2_3[0:3,0:3]
             R0_3 = R0_3.evalf(subs={q1: theta1, q2:theta2, q3: theta3})
-
+	    # find the rotation between the last 3 joints
             R3_6 = R0_3.transpose() * ROT_EE
-
+	    # use the rotation matrix above to calculate the final 3 joint variables 
             theta4 = atan2(R3_6[2,2], -R3_6[0,2])
             theta5 = atan2(sqrt(R3_6[0,2]*R3_6[0,2] + R3_6[2,2]*R3_6[2,2]), R3_6[1,2])
             theta6 = atan2(-R3_6[1,1], R3_6[1,0])
