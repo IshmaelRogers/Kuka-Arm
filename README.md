@@ -9,6 +9,10 @@
 
 [image2]: ./Images/picknplace.PNG
 
+[image3]: Rrpy
+
+[image4]: lawofcosine
+
 
 
 ---
@@ -163,7 +167,31 @@ Assume that <a href="https://www.codecogs.com/eqnedit.php?latex=z_4&space;\paral
 
 
 
-### The equations to calculate all individual joint angles.
+### Calculating Joint Angles 
+
+Inverse position - calculating the first three joint angles that are responsible for positioning the end-effector
+
+0. Use the the the complete transformation above to obtain the position of the wrist center 
+1. Calculate the vector along the z-axis using the correction matrix
+2. Calculate the end-effector pose with respect to the base link using euler angles.
+NOTE: Chosing the x-y-z extrinsic rotations the rotational matrix to transform from one fixed frame to another 
+![alt text][image3]
+3. Convert from quaternions to roll pitch and yaw angles 
+4. Extract the wrist center position from the above matrix to get the wrist center 
+5. Derive the equations for the first three joints 
+
+![alt text][image4] 
+
+
+6. Use the DH parameters to calculate the distance between each joint
+7. Use the the law of Cosine to calculate theta 2 and 3. 
+
+Inverse orientation - calculating the last 3 jpint angles that are responsible for orienting the end-effector 
+
+8. Use the individual DH transforms to calculate the resultant transform 
+NOTE: The Roll Pitch Yaw rotations between the base_link and the gripper_link must be equal to the product of the individual rotations between respective links
+
+9. Substitute the values calculated for joints 1 to 3 in their respective individual rotation matrices and pre-multiply both side of the equation used in step 8 by the inverse of the matrix that defines the rotation from the base link to link 3. 
 
 Used the modified DH Conditions to locate the parameters
 Used the law of cosines to locate the wrist center 
@@ -172,11 +200,10 @@ Used the law of cosines to locate the wrist center
 
 ### Project Implementation
 
-#### 1. Fill in the `IK_server.py` file with properly commented python code for calculating Inverse Kinematics based on previously performed Kinematic Analysis. Your code must guide the robot to successfully complete 8/10 pick and place cycles. Briefly discuss the code you implemented and your results. 
+The current state of this code is primitive in nature. It will be further optimized in the future to include individual functions to handle small steps in the program. 
 
 ![alt text][Image2]
 
-The code follows calculates the FK model and then uses poses to estimate joint angles using the IKserver.py
 
 
 
