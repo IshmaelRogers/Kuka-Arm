@@ -11,7 +11,7 @@
 
 [image3]: ./Images/Rrpy.png
 
-[image4]: ./Images/lawofcosine
+[image4]: ./Images/lawofcosine.png
 
 
 
