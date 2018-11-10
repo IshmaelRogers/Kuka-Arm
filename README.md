@@ -9,9 +9,9 @@
 
 [image2]: ./Images/picknplace.PNG
 
-[image3]: Rrpy
+[image3]: ./Images/Rrpy.png
 
-[image4]: lawofcosine
+[image4]: ./Images/lawofcosine
 
 
 
