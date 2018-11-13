@@ -221,6 +221,12 @@ Calculating joints 4-5 require that we first find the rotation matrix between th
 
 Since the overall Roll, Pitch, and Yaw rotation between the base link and the end effector must be equal to the product of the individual rotations between respective links we have: 
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=_{6}^{0}\textrm{R}&space;=&space;R{_{roll,pitch,yaw}}&space;=&space;Rot_{EE}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{6}^{0}\textrm{R}&space;=&space;R{_{roll,pitch,yaw}}&space;=&space;Rot_{EE}" title="_{6}^{0}\textrm{R} = R{_{roll,pitch,yaw}} = Rot_{EE}" /></a>
+
+Next we calulate the rotation from link 3 to link using the transpose of <a href="https://www.codecogs.com/eqnedit.php?latex=_{3}^{0}\textrm{R}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{3}^{0}\textrm{R}" title="_{3}^{0}\textrm{R}" /></a> and the rotation matrix above: 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=_{6}^{3}\textrm{R}&space;=&space;_{3}^{0}\textrm{R}^{T}&space;\times&space;_{6}^{0}\textrm{R}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{6}^{3}\textrm{R}&space;=&space;_{3}^{0}\textrm{R}^{T}&space;\times&space;_{6}^{0}\textrm{R}" title="_{6}^{3}\textrm{R} = _{3}^{0}\textrm{R}^{T} \times _{6}^{0}\textrm{R}" /></a>
+
 ## Joint 4 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;_{4}&space;=&space;a\tan2(r_{33},&space;-r{_{13}})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;_{4}&space;=&space;a\tan2(r_{33},&space;-r{_{13}})" title="\theta _{4} = a\tan2(r_{33}, -r{_{13}})" /></a>
 
@@ -235,7 +241,7 @@ Since the overall Roll, Pitch, and Yaw rotation between the base link and the en
 
 ### Project Implementation
 
-The current state of this code is primitive in nature. It will be further optimized in the future to include individual functions to handle small steps in the program. 
+The current state of this code is primitive in nature. The pick and place operation is relatively slow and can be further optimized in the future to include individual functions to handle small steps in the program. 
 
 ![alt text][Image2]
 
