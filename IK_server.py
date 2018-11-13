@@ -127,7 +127,12 @@ def handle_calculate_IK(req):
             R0_3 = R0_3.evalf(subs={q1: theta1, q2:theta2, q3: theta3})
 	    # find the rotation between the last 3 joints
             R3_6 = R0_3.transpose() * ROT_EE
-	    # use the rotation matrix above to calculate the final 3 joint variables 
+	    # use the rotation matrix above to calculate the final 3 joint variables
+	    #r31 = R_XYZ[2,0]
+	    #r11 = R_XYZ[0,0]
+            #r21 = R_XYZ[1,0]
+            #r32 = R_XYZ[2,1]
+            #r33 = R_XYZ[2,2]	
             theta4 = atan2(R3_6[2,2], -R3_6[0,2])
             theta5 = atan2(sqrt(R3_6[0,2]*R3_6[0,2] + R3_6[2,2]*R3_6[2,2]), R3_6[1,2])
             theta6 = atan2(-R3_6[1,1], R3_6[1,0])
