@@ -212,7 +212,15 @@ Using trigonometry, it is possible to derive a closed solution for joint 2 by co
 
 ## Joint 3 
 
-Similarly, we can do this same process to obtain joint three.
+Now we use the joint and link offset to calulate joint 3 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{3}&space;=&space;\frac{\pi&space;}{2}&space;-&space;\angle&space;b\&space;-&space;a\tan&space;2(0.054,&space;1.5)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{3}&space;=&space;\frac{\pi&space;}{2}&space;-&space;\angle&space;b\&space;-&space;a\tan&space;2(0.054,&space;1.5)" title="\theta_{3} = \frac{\pi }{2} - \angle b\ - a\tan 2(0.054, 1.5)" /></a>
+
+## Joint 4 
+
+## Joint 5
+
+## Joint 6 
 
 
 ### Project Implementation
