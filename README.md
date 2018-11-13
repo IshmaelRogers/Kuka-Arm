@@ -198,9 +198,21 @@ Used the law of cosines to locate the wrist center
 
 ## Joint angle derivations
 
+## Joint 1
+
 After locating the cartesian coordinates of the wrist center, set the z component equal to zero and use the two arguement arctan function to calculate joint 1. 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;_{1}&space;=&space;a\tan2(WC_{y},&space;WC_{x})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;_{1}&space;=&space;a\tan2(WC_{y},&space;WC_{x})" title="\theta _{1} = a\tan2(WC_{y}, WC_{x})" /></a>
+
+## Joint 2
+
+Using trigonometry, it is possible to derive a closed solution for joint 2 by combining the linka and joint offsets with the position of the x and y position of the wrist center and setting Joint 1 equal to zero.
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;_{2}&space;=&space;\frac{\pi&space;}{2}&space;-&space;\angle&space;a&space;-&space;a\tan2(WC_{z}-0.75,&space;\sqrt{WC_{x}^{2}&space;&plus;&space;WC_{y}^{2}}&space;-&space;0.35)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;_{2}&space;=&space;\frac{\pi&space;}{2}&space;-&space;\angle&space;a&space;-&space;a\tan2(WC_{z}-0.75,&space;\sqrt{WC_{x}^{2}&space;&plus;&space;WC_{y}^{2}}&space;-&space;0.35)" title="\theta _{2} = \frac{\pi }{2} - \angle a - a\tan2(WC_{z}-0.75, \sqrt{WC_{x}^{2} + WC_{y}^{2}} - 0.35)" /></a>
+
+## Joint 3 
+
+Similarly, we can do this same process to obtain joint three.
 
 
 ### Project Implementation
