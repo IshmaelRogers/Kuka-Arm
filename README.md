@@ -196,6 +196,11 @@ NOTE: The Roll Pitch Yaw rotations between the base_link and the gripper_link mu
 Used the modified DH Conditions to locate the parameters
 Used the law of cosines to locate the wrist center 
 
+## Joint angle derivations
+
+After locating the cartesian coordinates of the wrist center, set the z component equal to zero and use the two arguement arctan function to calculate joint 1. 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;_{1}&space;=&space;a\tan2(WC_{y},&space;WC_{x})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;_{1}&space;=&space;a\tan2(WC_{y},&space;WC_{x})" title="\theta _{1} = a\tan2(WC_{y}, WC_{x})" /></a>
 
 
 ### Project Implementation
