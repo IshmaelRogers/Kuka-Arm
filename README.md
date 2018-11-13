@@ -228,7 +228,9 @@ Next we calulate the rotation from link 3 to link using the transpose of <a href
 <a href="https://www.codecogs.com/eqnedit.php?latex=_{6}^{3}\textrm{R}&space;=&space;_{3}^{0}\textrm{R}^{T}&space;\times&space;_{6}^{0}\textrm{R}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{6}^{3}\textrm{R}&space;=&space;_{3}^{0}\textrm{R}^{T}&space;\times&space;_{6}^{0}\textrm{R}" title="_{6}^{3}\textrm{R} = _{3}^{0}\textrm{R}^{T} \times _{6}^{0}\textrm{R}" /></a>
 
 NOTE: The above matrix takes the following form: 
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=\begin{bmatrix}&space;r_{11}&space;&&space;r_{12}&space;&&space;r_{13}&space;\\&space;r_{21}&space;&&space;r_{22}&space;&&space;r_{23}&space;\\&space;r_{31}&space;&&space;r_{32}&space;&&space;r_{33}&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;r_{11}&space;&&space;r_{12}&space;&&space;r_{13}&space;\\&space;r_{21}&space;&&space;r_{22}&space;&&space;r_{23}&space;\\&space;r_{31}&space;&&space;r_{32}&space;&&space;r_{33}&space;\end{bmatrix}" title="\begin{bmatrix} r_{11} & r_{12} & r_{13} \\ r_{21} & r_{22} & r_{23} \\ r_{31} & r_{32} & r_{33} \end{bmatrix}" /></a> 
+
 the individual elements in this matrix are used below. 
 
 ## Joint 4 
