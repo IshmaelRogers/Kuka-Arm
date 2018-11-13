@@ -217,8 +217,9 @@ Now we use the joint and link offset to calulate joint 3
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{3}&space;=&space;\frac{\pi&space;}{2}&space;-&space;\angle&space;b\&space;-&space;a\tan&space;2(0.054,&space;1.5)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{3}&space;=&space;\frac{\pi&space;}{2}&space;-&space;\angle&space;b\&space;-&space;a\tan&space;2(0.054,&space;1.5)" title="\theta_{3} = \frac{\pi }{2} - \angle b\ - a\tan 2(0.054, 1.5)" /></a>
 
 Calculating joints 4-5 require that we first find the rotation matrix between the base link and link 3
+<a href="https://www.codecogs.com/eqnedit.php?latex=_{3}^{0}\textrm{R}&space;=&space;_{1}^{0}\textrm{R}&space;\times&space;_&space;{2}^{1}\textrm{R}&space;\times&space;_{3}^{2}\textrm{R}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{3}^{0}\textrm{R}&space;=&space;_{1}^{0}\textrm{R}&space;\times&space;_&space;{2}^{1}\textrm{R}&space;\times&space;_{3}^{2}\textrm{R}" title="_{3}^{0}\textrm{R} = _{1}^{0}\textrm{R} \times _ {2}^{1}\textrm{R} \times _{3}^{2}\textrm{R}" /></a>
 
-
+Since the overall Roll, Pitch, and Yaw rotation between the base link and the end effector must be equal to the product of the individual rotations between respective links we have: 
 
 ## Joint 4 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;_{4}&space;=&space;a\tan2(r_{33},&space;-r{_{13}})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;_{4}&space;=&space;a\tan2(r_{33},&space;-r{_{13}})" title="\theta _{4} = a\tan2(r_{33}, -r{_{13}})" /></a>
