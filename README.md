@@ -216,11 +216,20 @@ Now we use the joint and link offset to calulate joint 3
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta_{3}&space;=&space;\frac{\pi&space;}{2}&space;-&space;\angle&space;b\&space;-&space;a\tan&space;2(0.054,&space;1.5)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_{3}&space;=&space;\frac{\pi&space;}{2}&space;-&space;\angle&space;b\&space;-&space;a\tan&space;2(0.054,&space;1.5)" title="\theta_{3} = \frac{\pi }{2} - \angle b\ - a\tan 2(0.054, 1.5)" /></a>
 
+Calculating joints 4-5 require that we first find the rotation matrix between the base link and link 3
+
+
+
 ## Joint 4 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;_{4}&space;=&space;a\tan2(r_{33},&space;-r{_{13}})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;_{4}&space;=&space;a\tan2(r_{33},&space;-r{_{13}})" title="\theta _{4} = a\tan2(r_{33}, -r{_{13}})" /></a>
 
 ## Joint 5
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;_{5}&space;=&space;a\tan2(\sqrt{r_{13}^{2}&space;&plus;&space;r_{33}^{2}}&space;\&space;,&space;r_{23})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;_{5}&space;=&space;a\tan2(\sqrt{r_{13}^{2}&space;&plus;&space;r_{33}^{2}}&space;\&space;,&space;r_{23})" title="\theta _{5} = a\tan2(\sqrt{r_{13}^{2} + r_{33}^{2}} \ , r_{23})" /></a>
+
 ## Joint 6 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;_{6}&space;=&space;a\tan2(-r_{22}&space;,&space;r_{21})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;_{6}&space;=&space;a\tan2(-r_{22}&space;,&space;r_{21})" title="\theta _{6} = a\tan2(-r_{22} , r_{21})" /></a>
 
 
 ### Project Implementation
