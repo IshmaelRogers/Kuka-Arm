@@ -186,7 +186,7 @@ NOTE: Chosing the x-y-z extrinsic rotations the rotational matrix to transform f
 6. Use the DH parameters to calculate the distance between each joint
 7. Use the the law of Cosine to calculate theta 2 and 3. 
 
-Inverse orientation - calculating the last 3 jpint angles that are responsible for orienting the end-effector 
+Inverse orientation - calculating the last 3 joint angles that are responsible for orienting the end-effector 
 
 8. Use the individual DH transforms to calculate the resultant transform 
 NOTE: The Roll Pitch Yaw rotations between the base_link and the gripper_link must be equal to the product of the individual rotations between respective links
@@ -247,7 +247,7 @@ the individual elements in this matrix are used below.
 
 ### Project Implementation
 
-The current state of this code is primitive in nature. The pick and place operation is relatively slow and can be further optimized in the future to include individual functions to handle small steps in the program. 
+The current state of this code is primitive in nature. The pick and place operation is relatively slow and can be further optimized in the future to include individual functions to handle small steps in the program. The overall functionality of the program is good enough to complete 8/10 pick and place operations 
 
 ![alt text][Image2]
 
