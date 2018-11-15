@@ -149,15 +149,17 @@ A correction matrix is necessary to account for discrepencies in the DH Table fe
 --
 <a href="https://www.codecogs.com/eqnedit.php?latex=Rot_{corr}&space;=&space;Rot_{z,\pi&space;}&space;\times&space;Rot_{y,\frac{-\pi}{2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Rot_{corr}&space;=&space;Rot_{z,\pi&space;}&space;\times&space;Rot_{y,\frac{-\pi}{2}}" title="Rot_{corr} = Rot_{z,\pi } \times Rot_{y,\frac{-\pi}{2}}" /></a>
 
-#### 3. Decoupling Inverse Kinematics problem into Inverse Position Kinematics and Inverse Orientation Kinematics
+## Decoupling Inverse Kinematics problem into Inverse Position Kinematics and Inverse Orientation Kinematics
 
 Since the Kuka KR210 Robot is a 6 DOF manipulator, it is possible to break the inverse kinematics problem into two simpler problems.
 
-1. Inverse Position involves determining the cartesian coordinated of the wrist center
+1. Inverse Position involves determining the cartesian coordinates of the wrist center
+
 ### Equation to solve for coordinates of wrist center
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=r_{wc/0}&space;=&space;r_{EE/0}&space;-&space;d&space;\times_&space;{6}^{0}\textrm{R}&space;\times&space;\begin{bmatrix}&space;0\\&space;0\\&space;1&space;\end{bmatrix}&space;=\begin{bmatrix}&space;p_{x}\\&space;p_{y}\\&space;p_{z}&space;\end{bmatrix}&space;-&space;d&space;\times&space;R_{6}^{0}&space;\times&space;\begin{bmatrix}&space;0\\&space;0\\&space;1&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?r_{wc/0}&space;=&space;r_{EE/0}&space;-&space;d&space;\times_&space;{6}^{0}\textrm{R}&space;\times&space;\begin{bmatrix}&space;0\\&space;0\\&space;1&space;\end{bmatrix}&space;=\begin{bmatrix}&space;p_{x}\\&space;p_{y}\\&space;p_{z}&space;\end{bmatrix}&space;-&space;d&space;\times&space;R_{6}^{0}&space;\times&space;\begin{bmatrix}&space;0\\&space;0\\&space;1&space;\end{bmatrix}" title="r_{wc/0} = r_{EE/0} - d \times_ {6}^{0}\textrm{R} \times \begin{bmatrix} 0\\ 0\\ 1 \end{bmatrix} =\begin{bmatrix} p_{x}\\ p_{y}\\ p_{z} \end{bmatrix} - d \times R_{6}^{0} \times \begin{bmatrix} 0\\ 0\\ 1 \end{bmatrix}" /></a>
 
-### Equation explanation 
+Equation explanation 
 ---
 
 Assume that <a href="https://www.codecogs.com/eqnedit.php?latex=z_4&space;\parallel&space;z_6" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z_4&space;\parallel&space;z_6" title="z_4 \parallel z_6" /></a> and point from the wrist center to the EE. The displacement is a translation along <a href="https://www.codecogs.com/eqnedit.php?latex=z_6" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z_6" title="z_6" /></a>. The magnitude of this displacement is labled d.
@@ -175,10 +177,12 @@ Assume that <a href="https://www.codecogs.com/eqnedit.php?latex=z_4&space;\paral
 Inverse position - calculating the first three joint angles that are responsible for positioning the end-effector
 
 0. Use the the the complete transformation above to obtain the position of the wrist center 
-1. Calculate the vector along the z-axis using the correction matrix
+1. Calculate the vector along the z-axis using the correction matrix above
 2. Calculate the end-effector pose with respect to the base link using euler angles.
-NOTE: Chosing the x-y-z extrinsic rotations the rotational matrix to transform from one fixed frame to another 
+
+NOTE: Choosing the x-y-z extrinsic rotations the rotational matrix to transform from one fixed frame to another 
 ![alt text][image3]
+
 3. Convert from quaternions to roll pitch and yaw angles 
 4. Extract the wrist center position from the above matrix to get the wrist center 
 5. Derive the equations for the first three joints 
