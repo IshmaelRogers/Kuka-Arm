@@ -1,3 +1,13 @@
+#!/usr/bin/env python
+
+import rospy
+import tf
+from kuka_arm.srv import *
+from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
+from geometry_msgs.msg import Pose
+from mpmath import *
+from sympy import 
+
 def TF_Matrix(alpha, a, d, q):
 		TF = Matrix([
 			[cos(q), 		-sin(q), 		0, 		a],
