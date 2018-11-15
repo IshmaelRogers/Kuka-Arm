@@ -184,7 +184,7 @@ NOTE: Choosing the x-y-z extrinsic rotations the rotational matrix to transform 
 ![alt text][image3]
 
 3. Convert from quaternions to roll pitch and yaw angles 
-4. Extract the wrist center position from the above matrix to get the wrist center 
+4. Extract the wrist center position from the above matrix 
 5. Derive the equations for the first three joints 
 
 ![alt text][image4] 
@@ -196,12 +196,13 @@ NOTE: Choosing the x-y-z extrinsic rotations the rotational matrix to transform 
 Inverse orientation - calculating the last 3 joint angles that are responsible for orienting the end-effector 
 
 8. Use the individual DH transforms to calculate the resultant transform 
-NOTE: The Roll Pitch Yaw rotations between the base_link and the gripper_link must be equal to the product of the individual rotations between respective links
+
+NOTE: The Roll Pitch Yaw rotations between the base_link and the gripper_link must be equal to the product of the individual rotations between respective links because the describe the orientation of the gripper.
 
 9. Substitute the values calculated for joints 1 to 3 in their respective individual rotation matrices and pre-multiply both side of the equation used in step 8 by the inverse of the matrix that defines the rotation from the base link to link 3. 
 
-Used the modified DH Conditions to locate the parameters
-Used the law of cosines to locate the wrist center 
+NOTE: The modified DH Table was used to locate the parameters
+NOTE: The law of cosines was used to locate the wrist center 
 
 ## Joint angle derivations
 
@@ -230,7 +231,7 @@ Since the overall Roll, Pitch, and Yaw rotation between the base link and the en
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=_{6}^{0}\textrm{R}&space;=&space;R{_{roll,pitch,yaw}}&space;=&space;Rot_{EE}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{6}^{0}\textrm{R}&space;=&space;R{_{roll,pitch,yaw}}&space;=&space;Rot_{EE}" title="_{6}^{0}\textrm{R} = R{_{roll,pitch,yaw}} = Rot_{EE}" /></a>
 
-Next we calulate the rotation from link 3 to link using the transpose of <a href="https://www.codecogs.com/eqnedit.php?latex=_{3}^{0}\textrm{R}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{3}^{0}\textrm{R}" title="_{3}^{0}\textrm{R}" /></a> and the rotation matrix above: 
+Next we calulate the rotation from link 3 to link 6 using the transpose of <a href="https://www.codecogs.com/eqnedit.php?latex=_{3}^{0}\textrm{R}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{3}^{0}\textrm{R}" title="_{3}^{0}\textrm{R}" /></a> and the rotation matrix above: 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=_{6}^{3}\textrm{R}&space;=&space;_{3}^{0}\textrm{R}^{T}&space;\times&space;_{6}^{0}\textrm{R}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?_{6}^{3}\textrm{R}&space;=&space;_{3}^{0}\textrm{R}^{T}&space;\times&space;_{6}^{0}\textrm{R}" title="_{6}^{3}\textrm{R} = _{3}^{0}\textrm{R}^{T} \times _{6}^{0}\textrm{R}" /></a>
 
@@ -243,6 +244,9 @@ the individual elements in this matrix are used below.
 The remaining joints are pretty straight forward and can be obtained using the atan2() function. 
 
 ## Joint 4 
+
+Joint 4 was calculated using the elements in the above matrix. To successfully do this, we first note that the rows of matrix  joint 4 must be project atan2() function was used after projecting 
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;_{4}&space;=&space;a\tan2(r_{33},&space;-r{_{13}})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;_{4}&space;=&space;a\tan2(r_{33},&space;-r{_{13}})" title="\theta _{4} = a\tan2(r_{33}, -r{_{13}})" /></a>
 
 ## Joint 5
