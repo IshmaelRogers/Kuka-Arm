@@ -241,7 +241,9 @@ NOTE: The above matrix takes the following form:
 
 the individual elements in this matrix are used below. 
 
-The remaining joints are pretty straight forward and can be obtained using the atan2() function. 
+Since joints 4 - 6 help control the orientation of the end-effector, we can use solve the for the Euler angles using the rotation matrix above(assume extrinsic X-Y-Z rotation sequence). The joint angles, which are equal to the Euler angles, are obtained with the following equations:
+
+
 
 ## Joint 4 
 
@@ -249,13 +251,11 @@ Joint 4 was calculated using the elements in the above matrix. To successfully d
 
 In general, the rows of matrix <a href="https://www.codecogs.com/eqnedit.php?latex=^{_{6}^{3}\textrm{R}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?^{_{6}^{3}\textrm{R}}" title="^{_{6}^{3}\textrm{R}}" /></a> are the projections of Frame 3 onto Frame 6. 
 
-Since the joint 4 help control the orientation of the end-effector, we use the same atan2 function to obtain the pitch angle (assume extrinsic X-Y-Z rotation sequence).
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;_{4}&space;=&space;a\tan2(r_{33},&space;-r{_{13}})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;_{4}&space;=&space;a\tan2(r_{33},&space;-r{_{13}})" title="\theta _{4} = a\tan2(r_{33}, -r{_{13}})" /></a>
 
 ## Joint 5
 
-Joint 5 is composed is obtained via the relationship between
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;_{5}&space;=&space;a\tan2(\sqrt{r_{13}^{2}&space;&plus;&space;r_{33}^{2}}&space;\&space;,&space;r_{23})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;_{5}&space;=&space;a\tan2(\sqrt{r_{13}^{2}&space;&plus;&space;r_{33}^{2}}&space;\&space;,&space;r_{23})" title="\theta _{5} = a\tan2(\sqrt{r_{13}^{2} + r_{33}^{2}} \ , r_{23})" /></a>
 
