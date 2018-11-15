@@ -214,7 +214,7 @@ After locating the cartesian coordinates of the wrist center, set the z componen
 
 ## Joint 2
 
-Using trigonometry, it is possible to derive a closed solution for joint 2 by combining the linka and joint offsets with the position of the x and y position of the wrist center and setting Joint 1 equal to zero.
+Using trigonometry, it is possible to derive a closed solution for joint 2 by combining the link and joint offsets with the position of the x and y position of the wrist center and setting Joint 1 equal to zero.
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;_{2}&space;=&space;\frac{\pi&space;}{2}&space;-&space;\angle&space;a&space;-&space;a\tan2(WC_{z}-0.75,&space;\sqrt{WC_{x}^{2}&space;&plus;&space;WC_{y}^{2}}&space;-&space;0.35)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;_{2}&space;=&space;\frac{\pi&space;}{2}&space;-&space;\angle&space;a&space;-&space;a\tan2(WC_{z}-0.75,&space;\sqrt{WC_{x}^{2}&space;&plus;&space;WC_{y}^{2}}&space;-&space;0.35)" title="\theta _{2} = \frac{\pi }{2} - \angle a - a\tan2(WC_{z}-0.75, \sqrt{WC_{x}^{2} + WC_{y}^{2}} - 0.35)" /></a>
 
@@ -242,16 +242,11 @@ NOTE: The above matrix takes the following form:
 
 the individual elements in this matrix are used below. 
 
-Since joints 4 - 6 help control the orientation of the end-effector, we can use solve the for the Euler angles using the rotation matrix above(assume extrinsic X-Y-Z rotation sequence). The joint angles, which are equal to the Euler angles, are obtained with the following equations:
+Since joints 4 - 6 help control the orientation of the end-effector, we can solve for the Euler angles using the rotation matrix above if we assume an extrinsic 'X-Y-Z' rotation sequence. The joint angles, which are equal to the Euler angles, are obtained with the following equations:
 
 
 
 ## Joint 4 
-
-Joint 4 was calculated using the elements in the above matrix. To successfully do this, we first note that the relationship between the rows of matrix <a href="https://www.codecogs.com/eqnedit.php?latex=^{_{6}^{3}\textrm{R}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?^{_{6}^{3}\textrm{R}}" title="^{_{6}^{3}\textrm{R}}" /></a>  
-
-In general, the rows of matrix <a href="https://www.codecogs.com/eqnedit.php?latex=^{_{6}^{3}\textrm{R}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?^{_{6}^{3}\textrm{R}}" title="^{_{6}^{3}\textrm{R}}" /></a> are the projections of Frame 3 onto Frame 6. 
-
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;_{4}&space;=&space;a\tan2(r_{33},&space;-r{_{13}})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;_{4}&space;=&space;a\tan2(r_{33},&space;-r{_{13}})" title="\theta _{4} = a\tan2(r_{33}, -r{_{13}})" /></a>
 
