@@ -255,7 +255,7 @@ Since the joint 4 help control the orientation of the end-effector, we use the s
 
 ## Joint 5
 
-Joint 
+Joint 5 is composed is obtained via the relationship between
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;_{5}&space;=&space;a\tan2(\sqrt{r_{13}^{2}&space;&plus;&space;r_{33}^{2}}&space;\&space;,&space;r_{23})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;_{5}&space;=&space;a\tan2(\sqrt{r_{13}^{2}&space;&plus;&space;r_{33}^{2}}&space;\&space;,&space;r_{23})" title="\theta _{5} = a\tan2(\sqrt{r_{13}^{2} + r_{33}^{2}} \ , r_{23})" /></a>
 
